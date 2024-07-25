@@ -116,20 +116,64 @@ Funcionalidade: Login
     Quando eu validar a cor do link ""Esqueceu a sua senha" 
     Então ela deve estar de acordo com a documentação
 
+    Cenário: Verificar a poisição do botão "Entrar" da página de login
+    Dado que o usuário esteja na página "https://discord.com/login"
+    Quando eu validar a posição do botão "Entrar" 
+    Então ela deve estar de acordo com a documentação
+
     Cenário: Verificar a cor do botão "Entrar" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
     Quando eu validar a cor do botão "Entrar" 
     Então ela deve estar de acordo com a documentação
 
+    Cenário: Verificar a posção do texto "Precisando de uma conta?" da página de login
+    Dado que o usuário esteja na página "https://discord.com/login"
+    Quando eu validar a posição do texto "Precisando de uma conta?" 
+    Então ela deve estar de acordo com a documentação
+
     Cenário: Verificar a cor do texto "Precisando de uma conta?" da página de login
+    Dado que o usuário esteja na página "https://discord.com/login"
+    Quando eu validar a cor do texto "Precisando de uma conta?" 
+    Então ela deve estar de acordo com a documentação
+
+    Cenário: Verificar a posição do texto "Registre-se" da página de login
+    Dado que o usuário esteja na página "https://discord.com/login"
+    Quando eu validar a posição do link "Registre-se" 
+    Então ela deve estar de acordo com a documentação
+
+    Cenário: Verificar a cor do texto "Registre-se" da página de login
+    Dado que o usuário esteja na página "https://discord.com/login"
+    Quando eu validar a cor do link "Registre-se" 
+    Então ela deve estar de acordo com a documentação
 
     Cenário: Verificar a posição do QR Code da página de login
+    Dado que o usuário esteja na página "https://discord.com/login"
+    Quando eu validar a posição do "QR Code" 
+    Então ela deve estar de acordo com a documentação
+
+    Cenário: Verificar a posição texto "Entrar com código QR"
+    Dado que o usuário esteja na página "https://discord.com/login"
+    Quando eu validar a posição do texto "Entrar com código QR" 
+    Então ela deve estar de acordo com a documentação
+
+    Cenário: Verificar a cor texto "Entrar com código QR"
+    Dado que o usuário esteja na página "https://discord.com/login"
+    Quando eu validar a cor do texto "Entrar com código QR" 
+    Então ela deve estar de acordo com a documentação
 
     Cenário: Verificar a posição do link "Ou, faça login com a senha" da página de login
+    Dado que o usuário esteja na página "https://discord.com/login"
+    Quando eu validar a posição do link "Ou, faça login com a senha" 
+    Então ela deve estar de acordo com a documentação
 
     Cenário: Verificar a cor do link "Ou, faça login com a senha" da página de login
+    Dado que o usuário esteja na página "https://discord.com/login"
+    Quando eu validar a cor do link "Ou, faça login com a senha" 
+    Então ela deve estar de acordo com a documentação
 
-    Cenário: Verificar a resposividade do site
+    Cenário: Design responsivo em desktop
+    Dado que o usuário esteja na página "https://discord.com/login"
+    Então todos os elementos devem ser exibidos corretamente sem sobreposição
 
     
 
