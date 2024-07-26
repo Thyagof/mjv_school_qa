@@ -11,20 +11,10 @@ Funcionalidade: Login
     E pressionar a tecla "Enter"
     Então o sistema deve exibir a página de login
 
-    Cenário: Problemas de rede ao acessar a página de login
-    Dado que estou com problemas de conectividade com o site
-    Quando eu estiver na página inicial
-    Então devo visualizar uma mensagem de "Por favor, volte mais tarde"
-
     Cenário: Verificar o título da página
     Dado que o usuário esteja na página "https://discord.com/login"
     Quando verificar o título da página
     Então será possível validar que ela está de acordo com a documentação
-
-    Cenário: Formatação dos textos da página
-    Dado que o usuário esteja na página "https://discord.com/login"
-    Quando carregar a página 
-    Entao devo visualizar os textos da página indentados
 
     Cenário: Verificar o favicon da página
     Dado que o usuário esteja na página "https://discord.com/login"
@@ -38,141 +28,150 @@ Funcionalidade: Login
 
     Cenário: Verificar a posição da logo do discord
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a posição da logo do Discord 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a posição da logo do Discord presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
     Cenário: Verificar a posição do texto "Boas-Vindas de Volta!" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a posição do texto "Boas-Vindas de Volta!" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a posição do texto "Boas-Vindas de Volta!" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
     Cenário: Verificar a cor do texto "Boas-Vindas de Volta!" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a cor do texto "Boas-Vindas de Volta!" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a cor do texto "Boas-Vindas de Volta!" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
-    Cenário: Verificar a posição do texto "Estamos muito animados em ter você novamente!" da página de login
+    Cenário: Verificar a posição do texto "Estamos muito animados em te ver novamente!" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a posição do texto "Estamos muito animados em ter você novamente!" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a posição do texto "Estamos muito animados em te ver novamente!" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
-    Cenário: Verificar a cor  do texto "Estamos muito animados em ter você novamente!" da página de login
+    Cenário: Verificar a cor do texto "Estamos muito animados em te ver novamente!" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a cor do texto "Estamos muito animados em ter você novamente!" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a cor do texto "Estamos muito animados em te ver novamente!" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
     Cenário: Verificar a posição do texto "E-MAIL OU NÚMERO DE TELEFONE *" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a posição do texto "E-MAIL OU NÚMERO DE TELEFONE *" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a posição do texto "E-MAIL OU NÚMERO DE TELEFONE *" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
     Cenário: Verificar a cor do texto "E-MAIL OU NÚMERO DE TELEFONE *" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a cor do texto "E-MAIL OU NÚMERO DE TELEFONE *" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a cor do texto "E-MAIL OU NÚMERO DE TELEFONE *" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
     Cenário: Verifica a posição do campo "E-MAIL OU NÚMERO DE TELEFONE *" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a posição do campo "E-MAIL OU NÚMERO DE TELEFONE *" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a posição do campo "E-MAIL OU NÚMERO DE TELEFONE *" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
     Cenário: Verificar a cor do campo ""E-MAIL OU NÚMERO DE TELEFONE *"" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a cor do campo "E-MAIL OU NÚMERO DE TELEFONE *" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a cor do campo "E-MAIL OU NÚMERO DE TELEFONE *" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
-    Cenário: Verificar a cor da fonte do inserimento de texto do campo "E-MAIL OU NÚMERO DE TELEFONE *" da página de login
+    Cenário: Verificar o estilo do texto do campo "E-MAIL OU NÚMERO DE TELEFONE *" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a cor da fonte do inserimento de texto do campo "E-MAIL OU NÚMERO DE TELEFONE *" // discutir como melhorar esse cenário
-    Então ela deve estar de acordo com a documentação
+    Quando digitar "discord" dentro do campo "E-MAIL OU NÚMERO DE TELEFONE *"  presente na página 
+    E verificar o estilo do texto do campo "E-MAIL OU NÚMERO DE TELEFONE *"  
+    Então será possível validar que ele está de acordo com a documentação
 
-    Cenário: Verificar a posição da fonte do texto "Senha *" da página de login
+    Cenário: Verificar o estilo do texto do campo "SENHA *" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a posição do texto "Senha *" 
-    Então ela deve estar de acordo com a documentação
+    Quando digitar "1234567" dentro do campo "SENHA *"  presente na página 
+    E verificar o estilo do texto do campo "SENHA *"  
+    Então será possível validar que ele está de acordo com a documentação
 
-    Cenário: Verificar a cor da fonte do texto "Senha *" da página de login
+    Cenário: Verificar o texto oculto do campo "SENHA *" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a cor do texto "Senha *" 
-    Então ela deve estar de acordo com a documentação
-
-    Cenário: Verificar a cor da fonte do inserimento de texto do campo "Senha*" da página de login
-    Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a cor da fonte do inserimento de texto do campo "Senha *" // discutir como melhorar esse cenário
-    Então ela deve estar de acordo com a documentação
+    Quando digitar "1234567" dentro do campo "SENHA *"  presente na página 
+    E verificar o texto do campo "SENHA *"  
+    Então será possível validar que ele está oculto
 
     Cenário: Verifica a posição do campo "Senha *" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a cor do campo "Senha*" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a posição do campo "Senha*" presente na página 
+    Então será possível validar que ela está de acordo com a documentação
 
-    Cenário: Verificar a posição do texto do link "Esqueceu a sua senha" da página de login
+    Cenário: Verificar a posição do link "Esqueceu sua senha?" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a posição do link ""Esqueceu a sua senha" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a posição do link "Esqueceu sua senha?" presente na página 
+    Então será possível validar que ela está de acordo com a documentação
 
-    Cenário: Verificar a cor do texto do link "Esqueceu a sua senha*" da página de login
+    Cenário: Verificar a cor do link "Esqueceu sua senha?" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a cor do link ""Esqueceu a sua senha" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a cor do link "Esqueceu sua senha?" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
-    Cenário: Verificar a poisição do botão "Entrar" da página de login
+    Cenário: Verificar a posição do botão "Entrar" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a posição do botão "Entrar" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a posição do botão "Entrar" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
     Cenário: Verificar a cor do botão "Entrar" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a cor do botão "Entrar" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a cor do botão "Entrar" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
-    Cenário: Verificar a posção do texto "Precisando de uma conta?" da página de login
+    Cenário: Verificar a posição do texto "Precisando de uma conta?" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a posição do texto "Precisando de uma conta?" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a posição do texto "Precisando de uma conta?" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
     Cenário: Verificar a cor do texto "Precisando de uma conta?" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a cor do texto "Precisando de uma conta?" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a cor do texto "Precisando de uma conta?" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
-    Cenário: Verificar a posição do texto "Registre-se" da página de login
+    Cenário: Verificar a posição do link "Registre-se" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a posição do link "Registre-se" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a posição do link "Registre-se" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
-    Cenário: Verificar a cor do texto "Registre-se" da página de login
+    Cenário: Verificar a cor do link "Registre-se" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a cor do link "Registre-se" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a cor do link "Registre-se" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
     Cenário: Verificar a posição do QR Code da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a posição do "QR Code" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a posição do "QR Code" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
     Cenário: Verificar a posição texto "Entrar com código QR"
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a posição do texto "Entrar com código QR" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a posição do texto "Entrar com código QR" presente na página
+    Então será possível validar que ele está de acordo com a documentação
 
     Cenário: Verificar a cor texto "Entrar com código QR"
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a cor do texto "Entrar com código QR" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a cor do texto "Entrar com código QR" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
     Cenário: Verificar a posição do link "Ou, faça login com a senha" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a posição do link "Ou, faça login com a senha" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a posição do link "Ou, faça login com a senha" presente na página
+    Então será possível validar que ela está de acordo com a documentação
 
     Cenário: Verificar a cor do link "Ou, faça login com a senha" da página de login
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando eu validar a cor do link "Ou, faça login com a senha" 
-    Então ela deve estar de acordo com a documentação
+    Quando verificar a cor do link "Ou, faça login com a senha" presente na página
+    Então será possível validar que ele está de acordo com a documentação
+
+    Cenário: Verificar a posição da caixa principal do conteúdo
+    Dado que o usuário esteja na página "https://discord.com/login"
+    Quando verificar a posição da caixa principal de conteúdo presente na página
+    Então será possível validar que ela está de acordo com a documentação
+
+    Cenário: Verificar o estilo da caixa principal do conteúdo
+    Dado que o usuário esteja na página "https://discord.com/login"
+    Quando verificar o estilo da caixa principal de conteúdo presente na página
+    Então será possível validar que ele está de acordo com a documentação
 
     Cenário: Design responsivo em desktop
-    Dado que o usuário esteja na página "https://discord.com/login"
+    Dado que o usuário esteja utilizando um dispositivo com a tela maior que 992px      
+    Quando acessar a página de login do Discord "https://discord.com/login"
     Então todos os elementos devem ser exibidos corretamente sem sobreposição
 
     
