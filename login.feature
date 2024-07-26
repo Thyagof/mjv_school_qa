@@ -14,7 +14,7 @@ Funcionalidade: Login
     Cenário: Verificar o título da página
         Dado que o usuário esteja na página "https://discord.com/login"
         Quando verificar o título da página
-        Então será possível validar que ela está de acordo com a documentação
+        Então o título será "Discord"
 
     Cenário: Verificar o favicon da página
         Dado que o usuário esteja na página "https://discord.com/login"
@@ -104,7 +104,7 @@ Funcionalidade: Login
         E clicar no botão "Entrar"
         Então o sistema exibirá a página inicial do Discord "https://discord.com/channels/@me"
 
-        Cenário: Tentar logar com número de telefone inválido e senha válida
+    Cenário: Tentar logar com número de telefone inválido e senha válida
         Dado que o usuário esteja na página "https://discord.com/login"
         Quando preencher os campos de login com número de telefone inválido e senha válida
         E clicar no botão "Entrar"
@@ -187,19 +187,33 @@ Funcionalidade: Login
         Então o sistema exibirá a mensagem de erro mudando a label do campo de login para "E-MAIL OU NÚMERO DE TELEFONE - Este e-mail não existe" 
 
     Cenário: "Esqueceu sua senha?" com número de telefone válido
+        Dado que o usuário esteja na página "https://discord.com/login"
+        Quando preencher o campo de login com número de telefone válido
+        E clicar no link "Esqueceu sua senha?"
+        Então o sistema exibirá a tela para inserir o código de redefinição de senha que foi enviado para o número de telefone
 
     Cenário: "Esqueceu sua senha?" com número de telefone inválido
+    Dado que o usuário esteja na página "https://discord.com/login"
+    Quando preencher o campo de login com número de telefone inválido
+    E clicar no link "Esqueceu sua senha?"
+    Então o sistema exibirá a tela para inserir o código de redefinição de senha que foi enviado para o número de telefone
 
     Cenário: "Esqueceu sua senha?" com campo login vazio
-        Cenário: "Esqueceu sua senha?" com e-mail inválido
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher os campos de login com e-mail válido
-        E clicar no link "Esqueceu sua senha?"
+        Quando clicar no link "Esqueceu sua senha?"
         Então o sistema exibirá a mensagem de erro mudando a label do campo de login para "E-MAIL OU NÚMERO DE TELEFONE - Este campo é obrigatório" 
 
     Cenário: "Esqueceu sua senha?" com e-mail válido e campo senha preenchido
+        Dado que o usuário esteja na página "https://discord.com/login"
+        Quando preencher o campo de login com e-mail válido e senha válida
+        E clicar no link "Esqueceu sua senha?"
+        Então o sistema exibirá um aviso com o texto: "Instruções enviadas Enviamos as instruções de mudança de senha para <e-mail válido utilizado>. Verifique a sua caixa de entrada e de spam."
 
     Cenário: "Esqueceu sua senha?" com número de telefone válido e campo senha preenchido
+        Dado que o usuário esteja na página "https://discord.com/login"
+        Quando preencher o campo de login com número de telefone válido e senha válida
+        E clicar no link "Esqueceu sua senha?"
+        Então o sistema exibirá a tela para inserir o código de redefinição de senha que foi enviado para o número de telefone
 
     Cenário: Logar com uma conta após recuperar a senha pelo "Esqueceu sua senha?"
         Dado que o usuário esteja na página "https://discord.com/login" após recuperar a senha de sua conta
@@ -219,22 +233,42 @@ Funcionalidade: Login
         Então o sistema exibirá a página inicial do Discord "https://discord.com/channels/@me"
         
     Cenário: Cancelar login com código QR no navegador
+        Dado que o usuário tenha escaneado o QR code da página "https://discord.com/login" usando o app
+        Quando clicar no botão "Não sou eu, recomece" no site
+        E clicar no botão "Cancelar" no app
+        Então o processo de login será cancelado
 
     Cenário: Cancelar login com código QR no celular
+        Dado que o usuário tenha escaneado o QR code da página "https://discord.com/login" usando o app
+        Quando clicar no botão "Cancelar" no app
+        E clicar no botão "Não sou eu, recomece" no site
+        Então o processo de login será cancelado
 
     Cenário: Atualização do código QR após 5 minutos e meio
-    Dado que o usuário esteja na página "https://discord.com/login"
-    Quando aguardar 5 minutos e meio
-    Então o QR code deve expirar e ser atualizado
+        Dado que o usuário esteja na página "https://discord.com/login"
+        Quando aguardar 5 minutos e meio
+        Então o QR code deve expirar e ser atualizado
 
-    Cenário: Logar com "Ou, faça login com a senha" usando Dispositivo Móvel
+    Cenário: Logar com "Ou, faça login com a senha" usando "Dispositivo Móvel"
+        Dado que o usuário selecionou "Dispositivo Móvel" na seção "Ou, faça login com a senha"
+        Quando conectar a Dispositivo Móvel
+        E completar o processo de login
+        Então o sistema exibirá a página inicial do Discord "https://discord.com/channels/@me"    
 
-    Cenário: Logar com "Ou, faça login com a senha" usando Chave de Segurança
+    Cenário: Logar com "Ou, faça login com a senha" usando "Chave de Segurança"
+        Dado que o usuário selecionou "Chave de Segurança" na seção "Ou, faça login com a senha"
+        Quando conectar a Chave de Segurança
+        E completar o processo de login
+        Então o sistema exibirá a página inicial do Discord "https://discord.com/channels/@me"
 
-    Cenário: Tentar fazer login com "Ou, faça login com a senha" usando Dispositivo Móvel resultando em timeout
+    Cenário: Tentar logar com "Ou, faça login com a senha" usando "Dispositivo Móvel" resultando em timeout
+        Dado que o usuário esteja tentando logar pelo link "Ou, faça login com a senha" usando "Dispositivo Móvel"
+        Quando aguardar 3 minutos
+        Então a operação de login será cancelada devido ao timeout
 
-    Cenário: Tentar fazer login com "Ou, faça login com a senha" usando Chave de Segurança resultando em timeout
-
-    Cenário: Tentar fazer login utilizando SQL Injection "' OR '1'='1"
-
-    Cenário: Tentar fazer login utilizando XSS (Cross-Site Scripting) "<script>alert('XSS')</script>"
+    Cenário: Tentar logar utilizando SQL Injection ("' OR '1'='1'; --")
+        Dado que o usuário esteja na página "https://discord.com/login"
+        Quando preencher o campo de login com "' OR '1'='1'; --"
+        E clicar no botão "Entrar"
+        Então o sistema exibirá a mensagem de erro mudando a label do campo de login para "E-MAIL OU NÚMERO DE TELEFONE - Login ou senha inválidos." em cor vermelha
+        E o sistema exibirá a mensagem de erro mudando a label do campo de senha para "SENHA - Login ou senha inválidos." em cor vermelha
