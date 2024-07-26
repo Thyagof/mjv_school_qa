@@ -33,168 +33,172 @@ Funcionalidade: Login
     
     Cenário: Verificar o campo "E-MAIL OU NÚMERO DE TELEFONE *" da página de login
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando verificar o campo "E-MAIL OU NÚMERO DE TELEFONE *" 
+        Quando verificar o campo "E-MAIL OU NÚMERO DE TELEFONE *" presente na página
         Então será possível validar que ele está de acordo com a documentação
 
     Cenário: Verificar o campo "SENHA *" da página de login
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando verificar o campo "SENHA *" 
+        Quando verificar o campo "SENHA *" presente na página
         Então será possível validar que ele está de acordo com a documentação
     
     Cenário: Verificar o botão "Entrar" da página de login
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando verificar o botão "Entrar" 
+        Quando verificar o botão "Entrar" presente na página
         Então será possível validar que ele está de acordo com a documentação
 
     Cenário: Verificar o link "Esqueceu sua senha?" da página de login
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando verificar o link "Esqueceu sua senha?"
+        Quando verificar o link "Esqueceu sua senha?" presente na página
         Então será possível validar que ele está de acordo com a documentação
 
     Cenário: Verificar o link "Registre-se" da página de login
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando verificar o link "Registre-se"
+        Quando verificar o link "Registre-se" presente na página
         Então será possível validar que ele está de acordo com a documentação
 
     Cenário: Verificar o link "Ou, faça login com a senha" da página de login
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando verificar o link "Ou, faça login com a senha"
+        Quando verificar o link "Ou, faça login com a senha" presente na página
         Então será possível validar que ele está de acordo com a documentação
 
     Cenário: Verificar o QR Code de login
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando verificar o QR Code de login
+        Quando verificar o QR Code de login presente na página
         Então será possível validar que ele está de acordo com a documentação
     
     Cenário: Verificar os textos complementares da página de login
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando verificar os textos complementares da página 
+        Quando verificar os textos complementares da página
         Então será possível validar que eles estão de acordo com a documentação
 
     Cenário: Logar utilizando e-mail válido e senha válida
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher os campos de login com e-mail válido e senha válida
-        E clicar no botão "Entrar"
+        Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um e-mail válido 
+        E preencher o campo "SENHA *" com uma senha válida
+        E clicar no botão "Entrar" 
         Então o sistema exibirá a página inicial do Discord "https://discord.com/channels/@me"
 
     Cenário: Tentar logar com e-mail válido e senha inválida
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher os campos de login com e-mail válido e senha inválida
+        Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um e-mail válido 
+        E preencher o campo "SENHA *" com uma senha inválida        
         E clicar no botão "Entrar"
         Então o sistema exibirá a mensagem de erro mudando a label do campo de login para "E-MAIL OU NÚMERO DE TELEFONE - Login ou senha inválidos." em cor vermelha
         E o sistema exibirá a mensagem de erro mudando a label do campo de senha para "SENHA - Login ou senha inválidos." em cor vermelha
 
     Cenário: Tentar logar com e-mail inválido e senha válida
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher os campos de login com e-mail inválido e senha válida
+        Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um e-mail inválido 
+        E preencher o campo "SENHA *" com uma senha válida
         E clicar no botão "Entrar"
         Então o sistema exibirá a mensagem de erro mudando a label do campo de login para "E-MAIL OU NÚMERO DE TELEFONE - Login ou senha inválidos." em cor vermelha
         E o sistema exibirá a mensagem de erro mudando a label do campo de senha para "SENHA - Login ou senha inválidos." em cor vermelha
 
     Cenário: Tentar logar com e-mail inválido e senha inválida
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher os campos de login com e-mail inválido e senha inválida
+        Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um e-mail inválido 
+        E preencher o campo "SENHA *" com uma senha inválida
         E clicar no botão "Entrar"
         Então o sistema exibirá a mensagem de erro mudando a label do campo de login para "E-MAIL OU NÚMERO DE TELEFONE - Login ou senha inválidos." em cor vermelha
         E o sistema exibirá a mensagem de erro mudando a label do campo de senha para "SENHA - Login ou senha inválidos." em cor vermelha
 
     Cenário: Logar utilizando número de telefone válido e senha válida
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher os campos de login com número de telefone válido e senha válida
+        Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um número de telefone válido 
+        E preencher o campo "SENHA *" com uma senha válida
         E clicar no botão "Entrar"
         Então o sistema exibirá a página inicial do Discord "https://discord.com/channels/@me"
 
     Cenário: Tentar logar com número de telefone inválido e senha válida
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher os campos de login com número de telefone inválido e senha válida
+        Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um número de telefone inválido 
+        E preencher o campo "SENHA *" com uma senha válida
         E clicar no botão "Entrar"
         Então o sistema exibirá a mensagem de erro mudando a label do campo de login para "E-MAIL OU NÚMERO DE TELEFONE - Login ou senha inválidos." em cor vermelha
         E o sistema exibirá a mensagem de erro mudando a label do campo de senha para "SENHA - Login ou senha inválidos." em cor vermelha
 
     Cenário: Tentar logar com número de telefone válido e senha inválida
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher os campos de login com número de telefone válido e senha inválida
+        Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um número de telefone válido 
+        E preencher o campo "SENHA *" com uma senha inválida
         E clicar no botão "Entrar"
         Então o sistema exibirá a mensagem de erro mudando a label do campo de login para "E-MAIL OU NÚMERO DE TELEFONE - Login ou senha inválidos." em cor vermelha
         E o sistema exibirá a mensagem de erro mudando a label do campo de senha para "SENHA - Login ou senha inválidos." em cor vermelha
 
     Cenário: Tentar logar com número de telefone inválido e senha inválida
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher os campos de login com número de telefone inválido e senha inválida
+        Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um número de telefone inválido 
+        E preencher o campo "SENHA *" com uma senha inválida
         E clicar no botão "Entrar"
         Então o sistema exibirá a mensagem de erro mudando a label do campo de login para "E-MAIL OU NÚMERO DE TELEFONE - Login ou senha inválidos." em cor vermelha
         E o sistema exibirá a mensagem de erro mudando a label do campo de senha para "SENHA - Login ou senha inválidos." em cor vermelha
 
     Cenário: Tentar logar preenchendo apenas o campo "E-mail ou Número de Telefone" com um e-mail válido
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher o campo de login e-mail válido
+        Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um e-mail válido
         E clicar no botão "Entrar"
         Então o sistema exibirá a mensagem de erro mudando a label do campo de login para "E-MAIL OU NÚMERO DE TELEFONE - Login ou senha inválidos." em cor vermelha
         E o sistema exibirá a mensagem de erro mudando a label do campo de senha para "SENHA - Login ou senha inválidos." em cor vermelha
 
     Cenário: Tentar logar preenchendo apenas o campo "E-mail ou Número de Telefone" com um e-mail inválido
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher o campo de login com e-mail inválido
+        Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um e-mail inválido
         E clicar no botão "Entrar"
         Então o sistema exibirá a mensagem de erro mudando a label do campo de login para "E-MAIL OU NÚMERO DE TELEFONE - Login ou senha inválidos." em cor vermelha
         E o sistema exibirá a mensagem de erro mudando a label do campo de senha para "SENHA - Login ou senha inválidos." em cor vermelha
 
     Cenário: Tentar logar preenchendo apenas o campo "E-mail ou Número de Telefone" com um número de telefone válido
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher o campo de login com número de telefone válido
+        Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um número de telefone válido
         E clicar no botão "Entrar"
         Então o sistema exibirá a mensagem de erro mudando a label do campo de login para "E-MAIL OU NÚMERO DE TELEFONE - Login ou senha inválidos." em cor vermelha
         E o sistema exibirá a mensagem de erro mudando a label do campo de senha para "SENHA - Login ou senha inválidos." em cor vermelha
 
     Cenário: Tentar logar preenchendo apenas o campo "E-mail ou Número de Telefone" com um número de telefone inválido
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher o campo de login com número de telefone inválido
+        Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um número de telefone inválido
         E clicar no botão "Entrar"
         Então o sistema exibirá a mensagem de erro mudando a label do campo de login para "E-MAIL OU NÚMERO DE TELEFONE - Login ou senha inválidos." em cor vermelha
         E o sistema exibirá a mensagem de erro mudando a label do campo de senha para "SENHA - Login ou senha inválidos." em cor vermelha
 
     Cenário: Tentar logar preenchendo apenas o campo senha com uma senha válida
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher o campo de login com uma senha válida
+        Quando preencher o campo "SENHA *" com uma senha válida
         E clicar no botão "Entrar"
-        Então o sistema exibirá a mensagem de erro mudando a label do campo de login para "E-MAIL OU NÚMERO DE TELEFONE - Login ou senha inválidos." em cor vermelha
-        E o sistema exibirá a mensagem de erro mudando a label do campo de senha para "SENHA - Login ou senha inválidos." em cor vermelha
-        E o sistema exibirá o aviso "Preencha este campo." direcionado para o campo de login
+        Então o sistema exibirá o aviso "Preencha este campo." direcionado para o campo "E-MAIL OU NÚMERO DE TELEFONE *"
 
     Cenário: Tentar logar preenchendo apenas o campo senha com uma senha inválida
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher o campo de login com uma senha inválida
+        Quando preencher o campo "SENHA *" com uma senha inválida
         E clicar no botão "Entrar"
-        Então o sistema exibirá a mensagem de erro mudando a label do campo de login para "E-MAIL OU NÚMERO DE TELEFONE - Login ou senha inválidos." em cor vermelha
-        E o sistema exibirá a mensagem de erro mudando a label do campo de senha para "SENHA - Login ou senha inválidos." em cor vermelha
-        E o sistema exibirá o aviso "Preencha este campo." direcionado para o campo de login
+        Então o sistema exibirá o aviso "Preencha este campo." direcionado para o campo "E-MAIL OU NÚMERO DE TELEFONE *"
 
     Cenário: Tentar logar sem preencher nenhum campo
-        Dado que o usuário esteja na página "https://discord.com/login"
-        Quando clicar no botão "Entrar"
-        Então o sistema exibirá o aviso "Preencha este campo." direcionado para o campo de login
+    Dado que o usuário esteja na página "https://discord.com/login"
+    Quando clicar no botão "Entrar"
+    Então o sistema exibirá o aviso "Preencha este campo." direcionado para o campo "E-MAIL OU NÚMERO DE TELEFONE *"
 
     Cenário: "Esqueceu sua senha?" com e-mail válido
-        Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher o campo de login com e-mail válido
-        E clicar no link "Esqueceu sua senha?"
-        Então o sistema exibirá um aviso com o texto: "Instruções enviadas Enviamos as instruções de mudança de senha para <e-mail válido utilizado>. Verifique a sua caixa de entrada e de spam."
+    Dado que o usuário esteja na página "https://discord.com/login"
+    Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um e-mail válido
+    E clicar no link "Esqueceu sua senha?"
+    Então o sistema exibirá um aviso com o texto: "Instruções enviadas Enviamos as instruções de mudança de senha para <e-mail válido utilizado>. Verifique a sua caixa de entrada e de spam."
     
     Cenário: "Esqueceu sua senha?" com e-mail inválido
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher o campo de login com e-mail inválido
+        Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um e-mail inválido
         E clicar no link "Esqueceu sua senha?"
         Então o sistema exibirá a mensagem de erro mudando a label do campo de login para "E-MAIL OU NÚMERO DE TELEFONE - Este e-mail não existe" 
 
     Cenário: "Esqueceu sua senha?" com número de telefone válido
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher o campo de login com número de telefone válido
+        Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um número de telefone válido
         E clicar no link "Esqueceu sua senha?"
         Então o sistema exibirá a tela para inserir o código de redefinição de senha que foi enviado para o número de telefone
 
     Cenário: "Esqueceu sua senha?" com número de telefone inválido
     Dado que o usuário esteja na página "https://discord.com/login"
-    Quando preencher o campo de login com número de telefone inválido
+    Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um número de telefone inválido
     E clicar no link "Esqueceu sua senha?"
     Então o sistema exibirá a tela para inserir o código de redefinição de senha que foi enviado para o número de telefone
 
@@ -203,15 +207,17 @@ Funcionalidade: Login
         Quando clicar no link "Esqueceu sua senha?"
         Então o sistema exibirá a mensagem de erro mudando a label do campo de login para "E-MAIL OU NÚMERO DE TELEFONE - Este campo é obrigatório" 
 
-    Cenário: "Esqueceu sua senha?" com e-mail válido e campo senha preenchido
+    Cenário: "Esqueceu sua senha?" com e-mail válido e senha válida
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher o campo de login com e-mail válido e senha válida
+        Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um e-mail válido 
+        E preencher o campo "SENHA *" com uma senha válida
         E clicar no link "Esqueceu sua senha?"
         Então o sistema exibirá um aviso com o texto: "Instruções enviadas Enviamos as instruções de mudança de senha para <e-mail válido utilizado>. Verifique a sua caixa de entrada e de spam."
 
-    Cenário: "Esqueceu sua senha?" com número de telefone válido e campo senha preenchido
+    Cenário: "Esqueceu sua senha?" com número de telefone válido e senha válida
         Dado que o usuário esteja na página "https://discord.com/login"
-        Quando preencher o campo de login com número de telefone válido e senha válida
+        Quando preencher o campo "E-MAIL OU NÚMERO DE TELEFONE *" com um número de telefone válido 
+        E preencher o campo "SENHA *" com uma senha válida
         E clicar no link "Esqueceu sua senha?"
         Então o sistema exibirá a tela para inserir o código de redefinição de senha que foi enviado para o número de telefone
 
